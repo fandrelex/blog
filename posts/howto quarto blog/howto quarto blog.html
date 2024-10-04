@@ -186,11 +186,12 @@ Dokumente wie PDF und auch HTML und Blogs</p>
 <p><code>quarto create-project meinblog --type website:blog</code></p>
 <p>Die Blog Dateien liegen im Unterordner <strong>meinblog</strong> und sind erst mal .qmd Dateien. Ich werden aber mit Jupyter Notebooks arbeiten. Um einen neuen Blogeintrag zu erstellen wird im Ordner /meinblog/posts/ ein neuer Ordner angelegt und in diesem ein neues Notebook erstellt.</p>
 <p>Zum starten des Jupyter-Lab habe ich ein kleines Powershell - Script erstellt, das die Virtuelle Umgebung aktiviert, Jupyterlab startet und die Vorschau des Blog aufruft, damit die Änderungen sofort sichtbar sind:</p>
-<p><a href="https://github.com/fandrelex/blog/startwin.ps1">Startwin.ps1</a></p>
+<p>Startwin.ps1</p>
 <pre><code>.\Scripts\activate
 start  jupyter-lab
 
 quarto preview myblog_fad</code></pre>
+<p>Eine Vorlage findet sich <a href="https://github.com/fandrelex/blog/tools/startwin.ps1">hier</a></p>
 </section>
 <section id="github-repository-erstellen-in-dem-nacher-die-daten-liegen-sollen" class="level3">
 <h3 class="anchored" data-anchor-id="github-repository-erstellen-in-dem-nacher-die-daten-liegen-sollen">4. Github Repository erstellen in dem nacher die Daten liegen sollen</h3>
@@ -264,7 +265,7 @@ xcopy /S /C /Y C:\PFAD ZUM BLOG\myblog_fad\_site\* C:\PFAD ZUM BLOG\_GitHub_onli
 git add .
 git commit -m "update"
 git push https://fandrelex:_XXXX_@github.com/fandrelex/2gittest.git</code></pre>
-<p>Für den Fall, dass die Daten von woanders geändert wurden werden wird zuerst im temporären Verzeichnis “GitHub_online” der aktuellen Zustand von git heruntergeladen. Danach können die Dateien in dieses Verzeichnis kopiert und von dort aus zu Github transferiert werden. Das <code>_XXXX_</code> bei <code>git push...</code> muss noch mit dem vorher gespeicherten Zugangs-Token von Github ersetzt werden!</p>
+<p>Für den Fall, dass die Daten von woanders geändert wurden werden wird zuerst im temporären Verzeichnis “GitHub_online” der aktuellen Zustand von git heruntergeladen. Danach können die Dateien in dieses Verzeichnis kopiert und von dort aus zu Github transferiert werden. Das <code>_XXXX_</code> bei <code>git push...</code> muss noch mit dem vorher gespeicherten Zugangs-Token von Github ersetzt werden! Eine Vorlage findet sich <a href="https://github.com/fandrelex/blog/tools/veroeffentlichen.cmd">hier</a>.</p>
 </section>
 </section>
 <section id="dieses-howto-basiert-auf-der-online-dokuemntation-von-quarto" class="level2">
