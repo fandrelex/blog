@@ -115,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Inhalt:</h2>
    
   <ul>
-  <li><a href="#howto" id="toc-howto" class="nav-link active" data-scroll-target="#howto">Howto:</a>
+  <li><a href="#einleitung" id="toc-einleitung" class="nav-link active" data-scroll-target="#einleitung">Einleitung:</a>
   <ul class="collapse">
   <li><a href="#quarto-auf-dem-betriebssystem-installieren" id="toc-quarto-auf-dem-betriebssystem-installieren" class="nav-link" data-scroll-target="#quarto-auf-dem-betriebssystem-installieren">1. Quarto auf dem Betriebssystem installieren</a></li>
   <li><a href="#eine-virtuelle-umgebung-mit-python-erstellen" id="toc-eine-virtuelle-umgebung-mit-python-erstellen" class="nav-link" data-scroll-target="#eine-virtuelle-umgebung-mit-python-erstellen">2. Eine virtuelle Umgebung mit Python erstellen:</a></li>
@@ -125,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#einen-blogeintrag-erstellen" id="toc-einen-blogeintrag-erstellen" class="nav-link" data-scroll-target="#einen-blogeintrag-erstellen">6. Einen Blogeintrag erstellen</a></li>
   <li><a href="#dateitransfer-vom-lokalen-system-nach-github" id="toc-dateitransfer-vom-lokalen-system-nach-github" class="nav-link" data-scroll-target="#dateitransfer-vom-lokalen-system-nach-github">7. Dateitransfer vom lokalen System nach Github</a></li>
   </ul></li>
-  <li><a href="#dieses-howto-basiert-auf-der-online-dokuemntation-von-quarto" id="toc-dieses-howto-basiert-auf-der-online-dokuemntation-von-quarto" class="nav-link" data-scroll-target="#dieses-howto-basiert-auf-der-online-dokuemntation-von-quarto">Dieses Howto basiert auf der Online Dokuemntation von Quarto:</a></li>
+  <li><a href="#dieses-howto-basiert-auf-der-online-dokumentation-von-quarto" id="toc-dieses-howto-basiert-auf-der-online-dokumentation-von-quarto" class="nav-link" data-scroll-target="#dieses-howto-basiert-auf-der-online-dokumentation-von-quarto">Dieses Howto basiert auf der Online Dokumentation von Quarto:</a></li>
   </ul>
 </nav>
     </div>
@@ -166,25 +166,26 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="howto" class="level2">
-<h2 class="anchored" data-anchor-id="howto">Howto:</h2>
-<p>Ein Blog mit <a href="https://quarto.org/">Quarto</a> erstellen das die Daten auf GitHub speichert und dort veröffentlicht.</p>
-<blockquote class="blockquote">
-<p>Quarto ist ein Tool mit dem aus u.a. aus Jupyter Notebooks Dokumente erstellt werden können.<br>
-Dokumente wie PDF und auch HTML und Blogs</p>
-</blockquote>
+<section id="einleitung" class="level2">
+<h2 class="anchored" data-anchor-id="einleitung">Einleitung:</h2>
+<p>Quarto ist ein vielseitiges Tool zur Erstellung von wissenschaftlichen Dokumenten, Präsentationen und Blogs. In Verbindung mit GitHub ermöglicht es nicht nur die einfache Verwaltung verschiedener Versionen, sondern bietet auch die Option, die erstellte Seite kostenlos über GitHub Pages zu hosten. So lassen sich Änderungen nachvollziehen und der Blog kann ohne zusätzliche Hosting-Kosten online veröffentlicht werden.</p>
 <section id="quarto-auf-dem-betriebssystem-installieren" class="level3">
 <h3 class="anchored" data-anchor-id="quarto-auf-dem-betriebssystem-installieren">1. Quarto auf dem Betriebssystem installieren</h3>
 <p>auf <a href="https://quarto.org/docs/get-started/">Quarto</a> die passende Installationsdatei auswählen und installieren.</p>
 </section>
 <section id="eine-virtuelle-umgebung-mit-python-erstellen" class="level3">
 <h3 class="anchored" data-anchor-id="eine-virtuelle-umgebung-mit-python-erstellen">2. Eine virtuelle Umgebung mit Python erstellen:</h3>
-<p>Sollte Python noch nicht installiert sein, dieses installieren und im Terminal / Powershell folgende Befehle ausführen: - in einem geeigneten Verzeichnis <code>python -m venv meinblog</code> ausführen.# - die virtuelle Umgebung aktivieren <code>./script/activate</code> - danach Jupyter-Lab installieren <code>pip install jupyterlab</code> mit dem der Blog editiert wird.</p>
+<p>Sollte Python noch nicht installiert sein, dieses installieren und im Terminal / Powershell folgende Befehle ausführen:</p>
+<ul>
+<li>in einem geeigneten Verzeichnis <code>python -m venv meinblog</code> ausführen.#</li>
+<li>die virtuelle Umgebung aktivieren <code>./script/activate</code></li>
+<li>danach Jupyter-Lab installieren <code>pip install jupyterlab</code> mit dem der Blog editiert wird.</li>
+</ul>
 </section>
 <section id="ein-neues-blog-projekt-erstellen" class="level3">
 <h3 class="anchored" data-anchor-id="ein-neues-blog-projekt-erstellen">3. Ein neues Blog-Projekt erstellen:</h3>
 <p><code>quarto create-project meinblog --type website:blog</code></p>
-<p>Die Blog Dateien liegen im Unterordner <strong>meinblog</strong> und sind erst mal .qmd Dateien. Ich werden aber mit Jupyter Notebooks arbeiten. Um einen neuen Blogeintrag zu erstellen wird im Ordner /meinblog/posts/ ein neuer Ordner angelegt und in diesem ein neues Notebook erstellt.</p>
+<p>Die Blog Dateien liegen im Unterordner <strong>meinblog</strong> und sind erst mal .qmd Dateien. Wir werden aber mit Jupyter Notebooks arbeiten. Um einen neuen Blogeintrag zu erstellen wird im Ordner /meinblog/posts/ ein neuer Ordner angelegt und in diesem ein neues Notebook erstellt.</p>
 <p>Zum starten des Jupyter-Lab habe ich ein kleines Powershell - Script erstellt, das die Virtuelle Umgebung aktiviert, Jupyterlab startet und die Vorschau des Blog aufruft, damit die Änderungen sofort sichtbar sind:</p>
 <p>Startwin.ps1</p>
 <pre><code>.\Scripts\activate
@@ -268,8 +269,8 @@ git push https://fandrelex:_XXXX_@github.com/fandrelex/2gittest.git</code></pre>
 <p>Für den Fall, dass die Daten von woanders geändert wurden werden wird zuerst im temporären Verzeichnis “GitHub_online” der aktuellen Zustand von git heruntergeladen. Danach können die Dateien in dieses Verzeichnis kopiert und von dort aus zu Github transferiert werden. Das <code>_XXXX_</code> bei <code>git push...</code> muss noch mit dem vorher gespeicherten Zugangs-Token von Github ersetzt werden! Eine Vorlage findet sich <a href="https://github.com/fandrelex/blog/blob/main/tools/veroeffentlichen.cmd">hier</a>.</p>
 </section>
 </section>
-<section id="dieses-howto-basiert-auf-der-online-dokuemntation-von-quarto" class="level2">
-<h2 class="anchored" data-anchor-id="dieses-howto-basiert-auf-der-online-dokuemntation-von-quarto">Dieses Howto basiert auf der Online Dokuemntation von Quarto:</h2>
+<section id="dieses-howto-basiert-auf-der-online-dokumentation-von-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="dieses-howto-basiert-auf-der-online-dokumentation-von-quarto">Dieses Howto basiert auf der Online Dokumentation von Quarto:</h2>
 <p><a href="https://quarto.org/docs/websites/website-blog.html">Creating a Blog</a></p>
 
 
